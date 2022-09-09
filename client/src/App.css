@@ -1,0 +1,33 @@
+header {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.character-attributes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr, 1fr;
+}
+
+.content-grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.content-grid > div {
+  height: 100%;
+  width: 100%;
+}
+
+.col-1 {
+  background-color: aqua;
+}
+
+.col-2 {
+  background-color: brown;
+}
+
+.col-3 {
+  background-color: burlywood;
+}

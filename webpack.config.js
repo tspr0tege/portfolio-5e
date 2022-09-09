@@ -26,5 +26,13 @@ module.exports = {
         }
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  watch: true,
+  watchOptions: {
+    poll: true,
+    ignored: /node_modules/
   }
 }
