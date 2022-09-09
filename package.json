@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "homepage": "http://tspr0tege.github.io/portfolio-5e",
+  "homepage": "https://tspr0tege.github.io/portfolio-5e",
   "dependencies": {
     "react": "^18.2.0"
   },
@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d public",
     "build": "npx webpack --config webpack.config.js",
     "build:w": "npx webpack --config webpack.config.js --watch"
   },
