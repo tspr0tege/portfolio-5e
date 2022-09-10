@@ -7,6 +7,7 @@ module.exports = {
   entry: APP_DIR + '/index.js',
   output: {
     filename: 'bundle.js',
+    publicPath: '/public/build/',
     path: BUILD_DIR
   },
   module: {
@@ -24,6 +25,10 @@ module.exports = {
             presets: ['@babel/react']
           }
         }
+      },
+      {
+        test: /\.png/,
+        type: 'asset/resource'
       }
     ]
   },

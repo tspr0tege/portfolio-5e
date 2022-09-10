@@ -13,7 +13,7 @@ export default () => {
           <h1>Character Name</h1>
         </div>
 
-        <div className="character-attributes">
+        <div className="nav-bar">
           <p>Class & Level</p>
           <p>Background</p>
           <p>Player Name</p>
@@ -44,7 +44,7 @@ export default () => {
           <h1>Character Name</h1>
         </div>
 
-        <div className="character-attributes">
+        <div className="nav-bar">
           <p>Age</p>
           <p>Height</p>
           <p>Weight</p>
@@ -75,7 +75,7 @@ export default () => {
           <h1>Spell Casting Class</h1>
         </div>
 
-        <div className="character-attributes">
+        <div className="nav-bar">
           <p>Spellcasting Ability</p>
           <p>Spell Save DC</p>
           <p>Spell Attack Bonus</p>

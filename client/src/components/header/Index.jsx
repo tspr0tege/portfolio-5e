@@ -1,19 +1,17 @@
 import React from 'react';
 import './Index.css';
 
+import headerImg from '../../images/header.png';
 import SuperNav from './superNav';
 import SubNav from './subNav';
 
 export default () => (
   <header>
-    <div className="character-name">
-      <h1>Character Name</h1>
-    </div>
+    <img src={headerImg} alt='Leonhart Tech logo image' />
+
+    <div className="nav-bar">
       <SuperNav />
-      <SubNav />
-    <div className="character-attributes">
-      
-      
+      <SubNav />      
     </div>
   </header>
 )
