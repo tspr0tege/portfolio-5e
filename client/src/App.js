@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 
-import Header from './components/header';
+import Header from './header';
+import Home from './pages/Home';
 
 export default () => {
   
@@ -24,20 +25,7 @@ export default () => {
       </header> */}
       <Header />
 
-      <div className="content-grid">
-        <div className="col-1">
-          Static Character stats
-        </div>
-        <div className="col-2">
-          Active Battle Stats
-          Quick reference to spells and attacks
-          Equipment
-        </div>
-        <div className="col-3">
-          Quick character reference (who you are)
-          Personal description
-        </div>
-      </div>
+      <Home />
 
       <header>
         <div className="character-name">

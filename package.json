@@ -5,7 +5,9 @@
   "private": true,
   "homepage": "https://tspr0tege.github.io/portfolio-5e",
   "dependencies": {
-    "react": "^18.2.0"
+    "bootstrap": "^5.2.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",

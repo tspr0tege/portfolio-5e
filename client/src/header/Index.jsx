@@ -1,9 +1,9 @@
 import React from 'react';
-import './Index.css';
+import './header.css';
 
-import headerImg from '../../images/header.png';
-import SuperNav from './superNav';
-import SubNav from './subNav';
+import headerImg from '../images/header.png';
+import SuperNav from './SuperNav';
+import SubNav from './SubNav';
 
 export default () => (
   <header>
