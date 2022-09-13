@@ -188,3 +188,51 @@ export const otherSkills = [
     level: 2
   }
 ];
+
+/* PROJECT TEMPLATE
+{
+  name: '',
+  type: 'personal/professional/educational',
+  thumbnail: '',
+  techstack: [],
+  story: '',
+  links: {
+    github: '',
+    hosted: ''
+  }
+}
+*/
+export const projects = [
+  {
+    name: 'Grid Battle Game',
+    type: 'personal',
+    thumbnail: 'https://i.ibb.co/Ns0LRWq/mmbn.png',
+    techstack: ['Replit', 'Kaboom.js'],
+    story: 'Building the core of an old Game Boy Advance game, that I intend to turn into a mobile game. Currently there is only a player and one enemy. The player can move within their constraints and "shoot" with right-click.',
+    links: {
+      replit: 'https://replit.com/@tspr0tege/MMBN-1#code/main.js',
+      hosted: 'https://mmbn-1.tspr0tege.repl.co/'
+    }
+  },
+  {
+    name: 'Quest Log',
+    type: 'personal',
+    thumbnail: 'https://i.ibb.co/whYYR8V/quest-log.png',
+    techstack: ['auth0', 'Axios', 'Babel', 'dotenv', 'Express', 'Font Awesome', 'Heroku', 'PostgreSQL', 'React', 'Sequelize', 'stormdb', 'uuid', 'Webpack'],
+    story: 'This app has gone through several early iterations, and will likely go through several more. The ultimate concept is a personal organizer that has RPG elements, and will create a personal journey story through its use. I have yet to create a UI/UX layout that I like, which has much to do with the constant redesigns.',
+    links: {
+      github: 'https://github.com/tspr0tege/quest-log',
+      hosted: 'https://new-quest-log.herokuapp.com/'
+    }
+  },
+  {
+    name: 'Project Catwalk',
+    type: 'educational',
+    thumbnail: null,
+    techstack: ['Axios', 'Babel', 'Express', 'Font Awesome', 'Jest', 'jQuery', 'Mocha/Chai', 'React', 'uuid', 'Webpack'],
+    story: 'This was a retail website design project that I did as part of a team at Hack Reactor. My part was the overview (main product display). Currently, the project is not viewable, as the API we used for product info no longer exists. I plan to rework the project and create an API to fix this.',
+    links: {
+      github: 'https://github.com/tspr0tege/Project-Catwalk'
+    }
+  }
+]
