@@ -14,7 +14,7 @@ export const coreCompetencies = [
   {
     name: 'JavaScript',
     icon: 'devicon-javascript-plain',
-    level: 8
+    level: 9
   },
   {
     name: 'Node.js',
@@ -74,7 +74,7 @@ export const otherSkills = [
   },
   {
     name: 'Express.js',
-    icon: 'devicon-express-original-wordmark',
+    icon: 'devicon-express-original',
     level: 3
   },
   {
@@ -208,7 +208,7 @@ export const projects = [
     type: 'personal',
     thumbnail: 'https://i.ibb.co/Ns0LRWq/mmbn.png',
     techstack: ['Replit', 'Kaboom.js'],
-    story: 'Building the core of an old Game Boy Advance game, that I intend to turn into a mobile game. Currently there is only a player and one enemy. The player can move within their constraints and "shoot" with right-click.',
+    summary: 'Building the core of an old Game Boy Advance game, that I intend to turn into a mobile game. Currently there is only a player and one enemy. The player can move within their constraints and "shoot" with right-click.',
     links: {
       replit: 'https://replit.com/@tspr0tege/MMBN-1#code/main.js',
       hosted: 'https://mmbn-1.tspr0tege.repl.co/'
@@ -219,7 +219,7 @@ export const projects = [
     type: 'personal',
     thumbnail: 'https://i.ibb.co/whYYR8V/quest-log.png',
     techstack: ['auth0', 'Axios', 'Babel', 'dotenv', 'Express', 'Font Awesome', 'Heroku', 'PostgreSQL', 'React', 'Sequelize', 'stormdb', 'uuid', 'Webpack'],
-    story: 'This app has gone through several early iterations, and will likely go through several more. The ultimate concept is a personal organizer that has RPG elements, and will create a personal journey story through its use. I have yet to create a UI/UX layout that I like, which has much to do with the constant redesigns.',
+    summary: 'This app has gone through several early iterations, and will likely go through several more. The ultimate concept is a personal organizer that has RPG elements, and will create a personal journey story through its use. I have yet to create a UI/UX layout that I like, which has much to do with the constant redesigns.',
     links: {
       github: 'https://github.com/tspr0tege/quest-log',
       hosted: 'https://new-quest-log.herokuapp.com/'
@@ -230,9 +230,54 @@ export const projects = [
     type: 'educational',
     thumbnail: null,
     techstack: ['Axios', 'Babel', 'Express', 'Font Awesome', 'Jest', 'jQuery', 'Mocha/Chai', 'React', 'uuid', 'Webpack'],
-    story: 'This was a retail website design project that I did as part of a team at Hack Reactor. My part was the overview (main product display). Currently, the project is not viewable, as the API we used for product info no longer exists. I plan to rework the project and create an API to fix this.',
+    summary: 'This was a retail website design project that I did as part of a team at Hack Reactor. My part was the overview (main product display). Currently, the project is not viewable, as the API we used for product info no longer exists. I plan to rework the project and create an API to fix this.',
     links: {
       github: 'https://github.com/tspr0tege/Project-Catwalk'
     }
   }
 ]
+
+export const experience = [
+  /*{
+    company: '',
+    position: '',
+    location: '',
+    from_to: [],
+    tech: [],
+    bullets: []
+  }*/
+  {
+    company: 'Andromeda 360',
+    position: 'Staff Engineer',
+    location: 'Remote',
+    from_to: [new Date('August 2022'), new Date()],
+    tech: [],
+    bullets: [
+      'Created a new Jest script for local and CI testing, to output only failing test cases to the terminal.',
+      'Commits consisted of bug fixes for UI components using Typescript, React, and GraphQL.',
+      'Full-time posistion terminated due to funding, but I have been kept on, on an equity basis.'
+    ]
+  },
+  {
+    company: 'Leonhart Tech',
+    position: 'Independent Developer and SE Instructor',
+    location: 'Remote',
+    from_to: [new Date('June 2021'), new Date()],
+    tech: [],
+    bullets: [
+      'Developed a Wix website for a client, using their proprietary jQuery library and (Mongo based) database to create a searchable database of websites, with video previews.',
+      'As an instructor, I have worked with University students, and actively employed developers, primarily on React and Node application concerns. To date, I maintain a nearly perfect 5-star feedback rating.'
+    ]
+  },
+  {
+    company: 'Pixel Academy',
+    position: 'Programming Instructor',
+    location: 'Brooklyn, NY',
+    from_to: [new Date('March 2017'), new Date('September 2017')],
+    tech: [],
+    bullets: [
+      'Taught children (groups of 10, ages 7-14) basic coding concepts through game development in company location, school seminars, and private lessons.',
+      'Taught computer logic with block coding in Game Maker, Java through Minecraft mods, and C# scripts in Unity.'
+    ]
+  }
+];

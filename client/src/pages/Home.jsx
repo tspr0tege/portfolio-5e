@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Card, Badge, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Card, Badge, OverlayTrigger, Tooltip, Accordion } from 'react-bootstrap';
 
-import { coreCompetencies, otherSkills, projects } from '../../database';
-// import './Index.css';
+import { coreCompetencies, otherSkills, projects, experience } from '../../database';
+import Codewars from '../icons/codewars.svg';
+import Medium from '../icons/medium.svg';
+
 
 export default () => {
 
@@ -17,71 +19,78 @@ export default () => {
 
   return (
     <div className="content-grid">
-      <div className="col-1">
-        <div className="core-skills-list">
-          {coreCompetencies.map((skill, i) => {
-            return (
-              <OverlayTrigger 
-                key={i}
-                placement='right'
-                overlay={
-                  <Tooltip id='tooltip-right'>
-                    <h5>{skill.name}</h5>
-                    <p>Level: {skill.level}</p>
-                  </Tooltip>
-                }
-              >
-                <Card className="text-center">
-                  <Card.Body>
-                    <Card.Text>
-                      <i className={skill.icon + ' core-skill-icon'} />
-                    </Card.Text>
-                    <Badge pill bg="secondary" className="skill-pill">
-                      {`- ${skill.level} -`}
-                    </Badge>
-                  </Card.Body>
-                </Card>
-              </OverlayTrigger>
-            )
-          })}
-        </div>
-        <div className="other-skills-list">
-          <Card style={{width: 'fit-content'}}>
-            <Card.Header>
-              <Card.Title>Additional Skills</Card.Title>
-            </Card.Header>
-            <Card.Body>
-              <p>Slider</p>
-              <input type="range" id="level-range" name="level-range" min="1" max="5" step="1" value={skillLvlMin} onChange={changeSkillMin} list="tickmarks" />
-              <datalist id="tickmarks">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </datalist>
-              <Card style={{maxHeight: '600px', overflow: 'auto'}}>
-                <Card.Body>
-                  {otherSkills.map((skill, i) => {
-                    if(skill.level >= skillLvlMin) {
-                      return (
-                        <p key={i} style={{display: 'flex'}} >
-                          <i className={skill.icon} />
-                          <span style={{flexGrow: '1'}}>{skill.name}</span>
-                          <Badge pill bg="secondary">{skill.level}</Badge>
-                        </p>
-                      )
-                    }
-                  })}
-                </Card.Body>
-              </Card>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="skills-summary">
-        </div>
+      <div className="skill-grid">
+        <Card>
+          <Card.Header>
+            <Card.Title>Core Skills</Card.Title>
+          </Card.Header>
+          <Card.Body className="core-skills-list">
+            {coreCompetencies.map((skill, i) => {
+              return (
+                <OverlayTrigger 
+                  key={i}
+                  placement='right'
+                  overlay={
+                    <Tooltip id='tooltip-right'>
+                      <h5>{skill.name}</h5>
+                      <p>Level: {skill.level}</p>
+                    </Tooltip>
+                  }
+                >
+                  <Card className="text-center">
+                    <Card.Body>
+                      <Card.Text>
+                        <i className={skill.icon + ' core-skill-icon'} />
+                      </Card.Text>
+                      <Badge pill bg="secondary" className="skill-pill">
+                        {`- ${skill.level} -`}
+                      </Badge>
+                    </Card.Body>
+                  </Card>
+                </OverlayTrigger>
+              )
+            })}
+          </Card.Body>
+        </Card>
+        <Card className="other-skills-container">
+          <Card.Header>
+            <Card.Title>Additional Skills</Card.Title>
+          </Card.Header>
+          <Card.Body className="vertical-flex">
+            <p>Minimum Comfort Level: {skillLvlMin}</p>
+            <datalist id="tickmarks">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </datalist>
+            <input type="range" id="level-range" name="level-range" min="1" max="5" step="1" value={skillLvlMin} onChange={changeSkillMin} list="tickmarks" />
+            <div className="other-skills-list">
+                {otherSkills.map((skill, i) => {
+                  if(skill.level >= skillLvlMin) {
+                    return (
+                      <p key={i} style={{display: 'flex', gap: '10px', alignItems: 'center'}} >
+                        <i className={'other-skill-icon ' + skill.icon} />
+                        <span style={{flexGrow: '1'}}>{skill.name}</span>
+                        <Badge pill style={{height: 'fit-content', fontSize: '.9rem'}} bg="secondary">{skill.level}</Badge>
+                      </p>
+                    )
+                  }
+                })}
+            </div>
+          </Card.Body>
+        </Card>
+        <Card className="skills-summary">
+          <Card.Header>
+            <Card.Title>Skills Summary</Card.Title>
+          </Card.Header>
+          <Card.Body>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit rem dolore nulla, ipsum voluptates repudiandae deleniti quisquam minima exercitationem, dignissimos mollitia sequi nemo harum, quam quos quo quia quasi reprehenderit? </p>
+          </Card.Body>
+        </Card>
       </div>
-      <div className="col-2"> 
+      <div className="vertical-flex"> 
         <Card>
           <Card.Header>
             <Card.Title>Projects</Card.Title>
@@ -93,7 +102,7 @@ export default () => {
                   return (
                     <div 
                       key={i}
-                      className={'project-thumbnail' + ((focusProject === i) ? ' highlight-aqua' : '')}
+                      className={'project-thumbnail' + ((focusProject === i) ? ' highlight' : '')}
                       onClick={() => { setFocusProject(i) }}
                     >
                       <p>no thumbnail available</p>
@@ -105,7 +114,7 @@ export default () => {
                       key={i} 
                       src={p.thumbnail} 
                       alt={`${p.thumbnail} thumbnail.`} 
-                      className={'project-thumbnail' + ((focusProject === i) ? ' highlight-aqua' : '')}
+                      className={'project-thumbnail' + ((focusProject === i) ? ' highlight' : '')}
                       onClick={() => { setFocusProject(i) }}
                     />
                   )
@@ -114,7 +123,7 @@ export default () => {
             </div>
             <h4>{projects[focusProject].name}</h4>
             <p>{projects[focusProject].type} project</p>
-            <p>{projects[focusProject].story}</p>
+            <p>{projects[focusProject].summary}</p>
               <Card.Footer className="project-select">
                 {Object.keys(projects[focusProject].links).map((p, i) => {
                   return (
@@ -126,13 +135,42 @@ export default () => {
         </Card>
         <Card>
           <Card.Header>
-            <Card.Title>Experience</Card.Title>
+            <Card.Title>Technical Experience</Card.Title>
           </Card.Header>
           <Card.Body>
-            <p>Andromeda 360</p>
-            <p>Leonhart Tech</p>
-            <p>Programming Instructor</p>
-            <p>Networking Support (tier 2)</p>
+            
+            {experience.map((e, i) => {
+              return (
+                <Accordion key={i}>
+                  <Accordion.Item eventKey={i}>
+                    <Accordion.Header>
+                      <div className="exp-container">
+                        <div>
+                          <h5>{e.position}</h5>
+                          <p>{e.company}</p>
+                        </div>
+                        <div className="exp-right">
+                          {/* e.from_to[1] instanceof Date */}
+                          <p>{`${e.from_to[0].toLocaleString('en-us', { month: 'short', year: 'numeric' })} - ${e.from_to[1].toLocaleString('en-us', { month: 'short', year: 'numeric' })}`}</p>
+                          <p>{e.location}</p>
+                        </div>
+                      </div>
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      <ul>
+                        {e.bullets.map((b, ii) => {
+                          return (
+                            <li key={ii}>{b}</li>
+                          )
+                        })}
+                      </ul>
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+
+              )
+            })}
+
           </Card.Body>
         </Card>
         <Card>
@@ -140,21 +178,41 @@ export default () => {
             <Card.Title>Education</Card.Title>
           </Card.Header>
           <Card.Body>
-            <p>Hack Reactor</p>
+            <p style={{float: 'right'}}><em>Jan - Apr 2021</em></p>
+            <h5>Hack Reactor</h5>
+            <p><em>Remote Advanced Software Engineering Immersive</em></p>
+            <ul style={{fontSize: '.9rem'}}>
+              <li>16 weeks program on the MERN stack. Work included: daily algorithm challenges, APIs, CRUD apps, test-driven development, MVC, ORMs, transpilers, scalable deployment (to Heroku and AWS), and team-based projects.</li>
+              <li>A personal favorite was the nQueens challenge, which I was able to optimize to run in better than 1/25th the time of the official solution code.</li>
+            </ul>
           </Card.Body>
         </Card>
       </div>
-      <div className="col-3">
+      <div className="vertical-flex">
         <Card>
           <Card.Header>
             <Card.Title>Profiles</Card.Title>
           </Card.Header>
           <Card.Body>
-            <p>codepen</p>
-            <p>Linkedin</p>
-            <p>github</p>
-            <p>codewars</p>
-            <p>medium</p>
+            <div className="profile-links">
+              <a href="https://www.linkedin.com/in/squall-leonhart/" target="_blank">
+                <i className="devicon-linkedin-plain"></i>
+                <p>LinkedIn</p>
+              </a>
+              <a href="https://github.com/tspr0tege" target="_blank">
+                <i className="devicon-github-original"></i>
+                <p>GitHub</p>
+              </a>
+              <a href="https://codepen.io/tspr0tege" target="_blank">
+                <i className="devicon-codepen-plain"></i>
+                <p>Codepen</p>
+              </a>
+              <a href="https://www.codewars.com/users/tspr0tege" target="_blank">
+                <Codewars />
+                <p>Code Wars</p>
+              </a>
+              {/* <Medium /> */}
+            </div>
           </Card.Body>
         </Card>
         <Card>

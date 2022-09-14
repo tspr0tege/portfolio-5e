@@ -7,6 +7,17 @@ header {
   grid-template-columns: 30% 70%;
 }
 
+p {
+  margin-bottom: 5px;
+}
+
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
 .nav-bar {
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
@@ -32,8 +43,14 @@ header {
 }
 
 .content-grid > div {
-  /* height: 100%; */
   width: 100%;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template: 760px 1fr / fit-content(30%) 1fr;
+  padding: 10px;
+  gap: 10px;
 }
 
 .core-skills-list {
@@ -42,14 +59,53 @@ header {
   flex-direction: column;
   gap: 10px;
   padding: 10px;
+  margin: auto;
 }
 
 .core-skill-icon {
   font-size: 4rem;
 }
 
+.other-skills-container {
+  width: 100%
+}
+
+.other-skills-container .vertical-flex {
+  max-height: calc(100% - 49px);
+}
+
+.skills-summary {
+  grid-column-start: span 2;
+  height: fit-content;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 3px;
+}
+
+#level-range {
+  width: 100%;
+}
+
 .other-skills-list {
-  margin: 10px;
+  flex-grow: 1;
+  overflow: auto;
+  border: solid 1px #bbb;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.other-skill-icon {
+  font-size: 2rem;
 }
 
 .skill-pill {
@@ -76,17 +132,68 @@ header {
   border: 1px #ccc solid;
 }
 
-.highlight-aqua {
+.highlight {
   border: aqua 4px solid;
 }
 
-.col-1, .col-2, .col-3 {
-  border: aqua dashed 2px;
-  padding: 10px;
+.exp-container {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 5px;
 }
 
-.col-2, .col-3 {
-  flex-direction: column;
+h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666;
+}
+
+.exp-container p {
+  margin-bottom: 0;
+}
+
+.exp-right {
+  text-align: right;
+  font-size: .9rem;
+  font-style: italic;
+  min-width: fit-content;
+}
+
+.profile-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  gap: 20px;
+}
+
+.profile-links a {
+  color: inherit;
+  text-decoration: none;
+  /* height: 45px;
+  width: 45px; 
+  border: solid 1px #999;
+  */
+  border-radius: 10px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.profile-links a:hover {
+  color: blue;
+  fill: blue;
+}
+
+.profile-links a:active {
+  color: white;
+  fill: white;
+  background-color: blue;
+}
+
+.profile-links p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.show-container {
+  border: #0bf dashed 2px;
 }

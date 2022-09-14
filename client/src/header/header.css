@@ -4,13 +4,13 @@ header img {
   box-sizing: border-box;
 }
 
-ul {
+header ul {
   height: 100%;
   display: flex;
   justify-content: space-around;
 }
 
-li {
+header li {
   list-style: none;
   /* float: left; */
 }
