@@ -250,7 +250,7 @@ export const experience = [
     company: 'Andromeda 360',
     position: 'Staff Engineer',
     location: 'Remote',
-    from_to: [new Date('August 2022'), new Date()],
+    from_to: [new Date('August 2022'), null],
     tech: [],
     bullets: [
       'Created a new Jest script for local and CI testing, to output only failing test cases to the terminal.',
@@ -262,7 +262,7 @@ export const experience = [
     company: 'Leonhart Tech',
     position: 'Independent Developer and SE Instructor',
     location: 'Remote',
-    from_to: [new Date('June 2021'), new Date()],
+    from_to: [new Date('June 2021'), null],
     tech: [],
     bullets: [
       'Developed a Wix website for a client, using their proprietary jQuery library and (Mongo based) database to create a searchable database of websites, with video previews.',

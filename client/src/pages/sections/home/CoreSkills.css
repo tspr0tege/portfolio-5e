@@ -1,0 +1,10 @@
+.core-skill-icon {
+  font-size: 4rem;
+}
+
+.skill-pill {
+  font-size: 1em;
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%, -5px);
+}

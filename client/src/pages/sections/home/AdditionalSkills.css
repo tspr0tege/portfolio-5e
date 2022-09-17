@@ -1,0 +1,19 @@
+#level-range {
+  width: 100%;
+}
+
+.other-skills-container .card-body {
+  max-height: calc(100% - 49px);
+}
+
+.other-skills-list {
+  flex-grow: 1;
+  overflow: auto;
+  border: solid 1px #bbb;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.other-skill-icon {
+  font-size: 2rem;
+}

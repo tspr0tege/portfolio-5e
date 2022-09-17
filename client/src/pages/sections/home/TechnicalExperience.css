@@ -1,0 +1,17 @@
+.exp-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 5px;
+}
+
+.exp-container p {
+  margin-bottom: 0;
+}
+
+.exp-right {
+  text-align: right;
+  font-size: .9rem;
+  font-style: italic;
+  min-width: fit-content;
+}

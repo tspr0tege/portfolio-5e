@@ -1,0 +1,29 @@
+.profile-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  gap: 20px;
+}
+
+.profile-links a {
+  color: inherit;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.profile-links a:hover {
+  color: blue;
+  fill: blue;
+}
+
+.profile-links a:active {
+  color: white;
+  fill: white;
+  background-color: blue;
+}
+
+.profile-links p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}

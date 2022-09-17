@@ -1,0 +1,41 @@
+.project-select {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 120px;
+  align-items: center;
+  justify-items: center;
+}
+
+.project-select p {
+  margin-bottom: 10px;
+}
+
+.links-footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-thumbnail {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: #999;
+  color: white;
+  overflow: hidden;
+  font-weight: 600;
+  text-align: center;
+  border: 1px #ccc solid;
+  box-sizing: content-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.project-thumbnail p {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.highlight {
+  border: aqua 4px solid;
+}

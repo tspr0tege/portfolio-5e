@@ -1,0 +1,24 @@
+.skill-grid {
+  display: grid;
+  grid-template: 760px 1fr / fit-content(30%) 1fr;
+  padding: 10px;
+  gap: 10px;
+}
+
+.skill-grid > div:nth-child(3) {
+  grid-column-start: span 2;
+  height: fit-content;
+}
+
+.core-skills-list {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  margin: auto;
+}
+
+.other-skills-container {
+  width: 100%
+}

@@ -38,7 +38,10 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      '@app': '/client/src'
+    }
   },
   watch: true,
   watchOptions: {
