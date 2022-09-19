@@ -1,3 +1,40 @@
+header {
+  height: 120px;
+  display: grid;
+  grid-template: 100% / 30% 70%;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 0 20px #000000cc;
+}
+
+#header-banner {
+  max-height: 100%;
+  max-width: 100%;
+  background-image: linear-gradient(to left, #fff 75%, transparent), url('https://i.ibb.co/vsSSfp1/header.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#header-banner div {
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+#header-banner * {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+#header-banner p { 
+  font-size: 1.5rem;
+}
+
 #nav-bar {
   display: grid;
   grid-template-rows: 60% 40%;

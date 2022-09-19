@@ -19,8 +19,12 @@ export default () => {
   return (
     <>
       <header>
-        <img src="https://i.ibb.co/vsSSfp1/header.png" alt="Leonhart Tech logo image" />
-
+        <div id="header-banner">
+          <div>
+            <h1>Squall Leonhart</h1>
+            <p>Developer Portfolio</p>
+          </div>
+        </div>
         <div id="nav-bar">
           <SuperNav />
           <SubNav names={subnavNames} />
@@ -28,6 +32,8 @@ export default () => {
       </header>
 
       <Home sendNames={getSubnav} />
+
+      <footer></footer>
     </>
   )
 }

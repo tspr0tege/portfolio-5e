@@ -50,17 +50,17 @@ export const otherSkills = [
   {
     name: 'Babel',
     icon: 'devicon-babel-plain',
-    level: 2
+    level: 3
   },
   {
     name: 'Bootstrap',
     icon: 'devicon-bootstrap-plain',
-    level: 2
+    level: 4
   },
   {
     name: 'C#',
     icon: 'devicon-csharp-plain',
-    level: 2
+    level: 1
   },
   {
     name: 'Docker',
@@ -70,12 +70,12 @@ export const otherSkills = [
   {
     name: 'ESLint',
     icon: 'devicon-eslint-original',
-    level: 1
+    level: 3
   },
   {
     name: 'Express.js',
     icon: 'devicon-express-original',
-    level: 3
+    level: 5
   },
   {
     name: 'figma',
@@ -85,22 +85,22 @@ export const otherSkills = [
   {
     name: 'git',
     icon: 'devicon-git-plain',
-    level: 3
+    level: 5
   },
   {
     name: 'GitHub',
     icon: 'devicon-github-original',
-    level: 3
+    level: 5
   },
   {
     name: 'GraphQL',
     icon: 'devicon-graphql-plain',
-    level: 1
+    level: 2
   },
   {
     name: 'Heroku',
     icon: 'devicon-heroku-original',
-    level: 2
+    level: 4
   },
   {
     name: 'Jasmine',
@@ -115,12 +115,12 @@ export const otherSkills = [
   {
     name: 'Jest',
     icon: 'devicon-jest-plain',
-    level: 2
+    level: 4
   },
   {
     name: 'jQuery',
     icon: 'devicon-jquery-plain-wordmark',
-    level: 2
+    level: 3
   },
   {
     name: 'k3s',
@@ -130,17 +130,17 @@ export const otherSkills = [
   {
     name: 'Kubernetes',
     icon: 'devicon-kubernetes-plain',
-    level: 2
+    level: 1
   },
   {
     name: 'MongoDB',
     icon: 'devicon-mongodb-plain',
-    level: 2
+    level: 3
   },
   {
     name: 'MySQL',
     icon: 'devicon-mysql-plain',
-    level: 1
+    level: 3
   },
   {
     name: 'npm',
@@ -175,17 +175,17 @@ export const otherSkills = [
   {
     name: 'Unity',
     icon: 'devicon-unity-original',
-    level: 2
+    level: 3
   },
   {
     name: 'VS Code',
     icon: 'devicon-vscode-plain',
-    level: 3
+    level: 5
   },
   {
     name: 'Webpack',
     icon: 'devicon-webpack-plain',
-    level: 2
+    level: 4
   }
 ];
 

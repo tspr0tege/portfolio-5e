@@ -2,23 +2,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-  height: 120px;
-  display: grid;
-  grid-template: 100% / 30% 70%;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  background-color: #fff;
-  box-shadow: 0 0 20px #000000cc;
-}
-
-header img {
-  max-height: 100%;
-  max-width: 100%;
-  padding: 0 0 10px 10px;
-}
-
 p {
   margin-bottom: 5px;
 }
@@ -89,8 +72,8 @@ h5 {
 }
 
 .blink-container {
-  -webkit-animation: blink-container .5s ease-in-out 0s;
-  -moz-animation: blink-container .5s ease-in-out 0s;
-  -o-animation: blink-container .5s ease-in-out 0s;
-  animation: blink-container .5s ease-in-out .2s;
+  -webkit-animation: blink-container .5s ease-in-out .5s;
+  -moz-animation: blink-container .5s ease-in-out .5s;
+  -o-animation: blink-container .5s ease-in-out .5s;
+  animation: blink-container .5s ease-in-out .5s;
 }
