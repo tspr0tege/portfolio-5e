@@ -77,3 +77,22 @@ header {
 #sub-nav .nav-btn {
   font-size: .9rem;
 }
+
+#contact-me-btn {
+  height: 100%;
+  width: auto;
+  position: relative;
+  aspect-ratio: 1/1;
+}
+
+#contact-me-btn:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 65%;
+  width: 65%;
+  border: #999 1px solid;
+  border-radius: 8px;
+}

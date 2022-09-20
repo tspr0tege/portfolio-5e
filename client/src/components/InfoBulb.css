@@ -1,0 +1,15 @@
+.info-bulb {
+  color: #999;
+  font-weight: 600;
+  border: 3px #999 solid;
+  border-radius: 50%;
+  height: 1.6rem;
+  aspect-ratio: 1/1;
+  text-align: center;
+  cursor: default;
+}
+
+.info-bulb:hover {
+  color: black;
+  border-color: black;
+}

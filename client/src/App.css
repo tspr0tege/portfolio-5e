@@ -31,7 +31,7 @@ p.aragraph:first-child::before {
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding-top: 120px;
+  padding-top: 125px;
 }
 
 .content-grid > div {

@@ -3,6 +3,7 @@ import { Badge } from 'react-bootstrap';
 
 import { otherSkills } from '@app/../database';
 
+import InfoBulb from '@app/components/InfoBulb';
 import './AdditionalSkills.css';
 
 export default () => {
@@ -17,7 +18,10 @@ export default () => {
   return (
     <>
       {/* <Card.Body className="vertical-flex"> */}
-      <p>Minimum Comfort Level: {skillLvlMin}</p>
+      <div className='space-out'>
+        <p>Minimum Comfort Level: {skillLvlMin}</p>
+        <InfoBulb item='additionalSkills' position='right' />
+      </div>
       <datalist id="tickmarks">
         <option value="1">1</option>
         <option value="2">2</option>

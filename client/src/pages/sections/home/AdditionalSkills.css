@@ -17,3 +17,8 @@
 .other-skill-icon {
   font-size: 2rem;
 }
+
+.space-out {
+  display: flex;
+  justify-content: space-between;
+}

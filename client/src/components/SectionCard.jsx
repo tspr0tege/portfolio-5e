@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import { Card } from 'react-bootstrap'
 
+import './SectionCard.css';
+
 const { Header, Title, Body } = Card;
 
 export default ({ title, children, cardClass='', bodyClass='', addToCollection }) => {
