@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import './App.css';
 import './Header.css';
@@ -28,10 +28,19 @@ const customStyles = {
 
 Modal.setAppElement('#app');
 
+const checkWindow = () => window.innerWidth < 450;
+
 export default () => {
 
   const [ subnavNames, setSubnavNames ] = useState({});
   const [ showModal, setShowModal ] = useState(false);
+  const [ smolScreen, setSmolScreen ] = useState(checkWindow());
+
+  useEffect(() => {
+    const onResize = () => { if (checkWindow() !== smolScreen) {setSmolScreen(b => !b);} }
+    window.addEventListener('resize', onResize);
+    return () => { window.removeEventListener('resize', onResize) }
+  }, [smolScreen]);
 
   function getSubnav({ names, functions }) {
     if (JSON.stringify(names) !== JSON.stringify(subnavNames.names)) {
@@ -60,6 +69,12 @@ export default () => {
             <p>Developer Portfolio</p>
           </div>
         </div>
+        {smolScreen &&
+          <>
+            <label htmlFor='hamenu' id='hamcheck'></label>
+            <input type='checkbox' id='hamenu' />
+          </>
+        }
         <div id="nav-bar">
           <SuperNav openContactForm={openModal} />
           <SubNav names={subnavNames} />

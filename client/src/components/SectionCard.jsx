@@ -26,8 +26,8 @@ export default ({ title, children, cardClass='', bodyClass='', addToCollection }
   
   return (
     <Card className={cardClass} ref={sectionRef}>
-      <Header>
-        <Title>{title}</Title>
+      <Header> 
+        <Title as="h5">{title}</Title>
       </Header>
       <Body className={bodyClass}>
         {children}

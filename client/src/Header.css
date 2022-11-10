@@ -50,7 +50,8 @@ header {
   border-bottom: solid #666 1px;
 }
 
-#super-nav .nav-btn:not(:last-child), #sub-nav .nav-btn:not(:last-child) {
+/* #super-nav .nav-btn:not(:last-child), #sub-nav  */
+.nav-btn:not(:last-child) {
   border-right: none;
 }
 
@@ -95,4 +96,110 @@ header {
   width: 65%;
   border: #999 1px solid;
   border-radius: 8px;
+}
+
+#contact-me-btn svg {
+  stroke: #999;
+  stroke-width: 2px;
+  width: 2em;
+  transform: translateX(4px);
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    display: block;
+    height: 70px;
+  }
+
+  #header-banner {
+    background-image: linear-gradient(to left, #fff 85%, transparent), url(https://i.ibb.co/vsSSfp1/header.png);
+  }
+
+  #header-banner div {
+    position: relative;
+    transform: translateY(0);
+  }
+
+  #hamcheck {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: 1px #999 solid;
+    height: 70px;
+    width: 60px;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #hamcheck::after {
+    content: "|||";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 2rem;
+    transform: rotate(90deg);
+    font-weight: 700;
+    color: #999;
+  }
+
+  #hamenu {
+    opacity: 0;
+  }
+  
+  #nav-bar {
+    display: block;
+    background-color: #333;
+    opacity: 0;
+    transform: translateY(0px);
+    z-index: -1;
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+
+  #hamenu:checked ~ #nav-bar {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(-20px);
+    z-index: 1;
+  }
+
+  #super-nav {
+    width: 100vw;
+  }
+
+  #sub-nav {
+    flex-direction: column;
+  }
+
+  .nav-btn {
+    min-height: 2rem;
+    background: white;
+    border: 2px solid #999;
+  }
+
+  #super-nav .nav-btn {
+    height: 2.5rem;
+    background: #eee;
+  }
+
+  .nav-btn:not(:last-child) {
+    border-right-style: solid;
+  }
+
+  #contact-me-btn {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    height: 50px;
+    border-radius: 50%;
+    background: #0cd2da;
+  }
+
+  #contact-me-btn svg {
+    stroke: #333;
+  }
+
+  #contact-me-btn:after {
+    border: none;
+  }
 }

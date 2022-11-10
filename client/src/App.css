@@ -77,3 +77,15 @@ h5 {
   -o-animation: blink-container .5s ease-in-out .5s;
   animation: blink-container .5s ease-in-out .5s;
 }
+
+@media screen and (max-width: 450px) {
+  .content-grid {
+    display: block;
+    padding-top: 75px;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}

@@ -4,12 +4,6 @@ import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import Email from '@app/icons/email.svg'
 
 const names = ['Home', 'Personal', 'Professional'];
-const svgProps = {
-  stroke: '#999',
-  strokeWidth: '2px',
-  width: '2em',
-  transform: 'translateX(4px)'
-};
 
 export default ({ openContactForm }) => {
 
@@ -40,7 +34,7 @@ export default ({ openContactForm }) => {
         }
       >
         <button id='contact-me-btn' className='nav-btn' onClick={openContactForm}>
-          <Email style={svgProps} />  
+          <Email/>  
         </button>        
       </OverlayTrigger>
     </div>
