@@ -23,7 +23,7 @@
   width: 100%
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 850px) {
   .skill-grid{
     grid-template: 735px 1fr / fit-content(30%) 1fr;
   }

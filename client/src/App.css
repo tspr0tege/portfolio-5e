@@ -36,6 +36,7 @@ p.aragraph:first-child::before {
 
 .content-grid > div {
   width: 100%;
+  max-width: 750px;
 }
 
 ::-webkit-scrollbar {
@@ -78,9 +79,18 @@ h5 {
   animation: blink-container .5s ease-in-out .5s;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1240px) {
   .content-grid {
     display: block;
+  }
+
+  .content-grid > div {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .content-grid {
     padding-top: 75px;
   }
 

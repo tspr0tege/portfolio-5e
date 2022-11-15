@@ -4,6 +4,7 @@ import './App.css';
 import './Header.css';
 
 import SuperNav from './navigation/SuperNav';
+import ContactButton from './components/ContactButton';
 import SubNav from './navigation/SubNav';
 import Home from './pages/Home';
 
@@ -28,7 +29,7 @@ const customStyles = {
 
 Modal.setAppElement('#app');
 
-const checkWindow = () => window.innerWidth < 450;
+const checkWindow = () => window.innerWidth < 850;
 
 export default () => {
 
@@ -76,12 +77,16 @@ export default () => {
           </>
         }
         <div id="nav-bar">
-          <SuperNav openContactForm={openModal} />
+          <SuperNav openContactForm={openModal}>
+            {!smolScreen && <ContactButton openContactForm={openModal}/>}
+          </SuperNav>
           <SubNav names={subnavNames} />
         </div>
       </header>
 
       <Home sendNames={getSubnav} />
+
+      {smolScreen && <ContactButton openContactForm={openModal}/>}
 
       <footer></footer>
     </>
