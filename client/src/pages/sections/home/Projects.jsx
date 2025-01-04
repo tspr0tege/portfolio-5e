@@ -37,12 +37,12 @@ export default () => {
         })}
       </div>
       <h4>{projects[focusProject].name}</h4>
-      <p>{projects[focusProject].type} project</p>
+      <p>{projects[focusProject].type}</p>
       <p className="aragraph">{projects[focusProject].summary}</p>
       <Card.Footer className="links-footer">
-        {Object.keys(projects[focusProject].links).map((p, i) => {
+        {projects[focusProject].links.map((p, i) => {
           return (
-            <a key={i} target='_blank' href={projects[focusProject].links[p]}>{p}</a>
+            <a key={i} target='_blank' href={p.link}>{p.title}</a>
           )
         })}
       </Card.Footer>

@@ -203,38 +203,89 @@ export const otherSkills = [
 }
 */
 export const projects = [
+  // {
+  //   name: 'Grid Battle Game',
+  //   type: 'personal',
+  //   thumbnail: 'https://i.ibb.co/Ns0LRWq/mmbn.png',
+  //   techstack: ['Replit', 'Kaboom.js'],
+  //   summary: 'Building the core of an old Game Boy Advance game, that I intend to turn into a mobile game. Currently there is only a player and one enemy. The player can move within their constraints and "shoot" with right-click.',
+  //   links: {
+  //     replit: 'https://replit.com/@tspr0tege/MMBN-1#code/main.js',
+  //     hosted: 'https://mmbn-1.tspr0tege.repl.co/'
+  //   }
+  // },
+  // {
+  //   name: 'Quest Log',
+  //   type: 'personal',
+  //   thumbnail: 'https://i.ibb.co/whYYR8V/quest-log.png',
+  //   techstack: ['auth0', 'Axios', 'Babel', 'dotenv', 'Express', 'Font Awesome', 'Heroku', 'PostgreSQL', 'React', 'Sequelize', 'stormdb', 'uuid', 'Webpack'],
+  //   summary: 'This app has gone through several early iterations, and will likely go through several more. The ultimate concept is a personal organizer that has RPG elements, and will create a personal journey story through its use. I have yet to create a UI/UX layout that I like, which has much to do with the constant redesigns.',
+  //   links: {
+  //     github: 'https://github.com/tspr0tege/quest-log',
+  //     hosted: 'https://new-quest-log.herokuapp.com/'
+  //   }
+  // },
+  // {
+  //   name: 'Project Catwalk',
+  //   type: 'educational',
+  //   thumbnail: null,
+  //   techstack: ['Axios', 'Babel', 'Express', 'Font Awesome', 'Jest', 'jQuery', 'Mocha/Chai', 'React', 'uuid', 'Webpack'],
+  //   summary: 'This was a retail website design project that I did as part of a team at Hack Reactor. My part was the overview (main product display). Currently, the project is not viewable, as the API we used for product info no longer exists. I plan to rework the project and create an API to fix this.',
+  //   links: {
+  //     github: 'https://github.com/tspr0tege/Project-Catwalk'
+  //   }
+  // },
   {
-    name: 'Grid Battle Game',
-    type: 'personal',
-    thumbnail: 'https://i.ibb.co/Ns0LRWq/mmbn.png',
-    techstack: ['Replit', 'Kaboom.js'],
-    summary: 'Building the core of an old Game Boy Advance game, that I intend to turn into a mobile game. Currently there is only a player and one enemy. The player can move within their constraints and "shoot" with right-click.',
-    links: {
-      replit: 'https://replit.com/@tspr0tege/MMBN-1#code/main.js',
-      hosted: 'https://mmbn-1.tspr0tege.repl.co/'
-    }
+    name: 'Project Planet Dive',
+    type: 'Video Game',
+    thumbnail: 'https://i.ibb.co/KDJpz0s/Thumbnail-001.jpg', // https://i.ibb.co/nBn2cPb/Thumbnail-002.jpg
+    techstack: ['Godot', 'Itch.io'],
+    summary: "This is currently a tech demo toward an inspired project that seeks to blend Blaster Master with old-school shoot'em ups, and a little Mega Man flavoring. In it's current form it's actually trying to be two different things (an arcade-style survival game, and my original intention). I will be forking it into two separate projects, as I think both will be fun.",
+    links: [
+      {
+        title: 'Play on itch.io',
+        link: 'https://mythrilshield.itch.io/ppd'
+      },
+      {
+        title: 'Github Repo',
+        link: 'https://github.com/tspr0tege/planet-dive'        
+      },
+    ]
+  },
+  {
+    name: 'Tactical Chess',
+    type: 'Video Game',
+    thumbnail: 'https://i.ibb.co/hFfvSNk/Thumbnail-001.jpg',
+    techstack: ['Godot', 'Itch.io'],
+    summary: 'This is my practice run at a tactics RPG style movement and mechanics, using Chess as a basis. The game is playable locally at the moment, and my next goal is to get online match-making working. As a result, I have come to learn that online multiplayer is infamously difficult.',
+    links: [
+      {
+        title: 'Play on itch.io',
+        link: 'https://mythrilshield.itch.io/tactical-chess'
+      },
+      {
+        title: 'Github Repo',
+        link: 'https://github.com/tspr0tege/Tactical-Chess'
+      },
+    ]
   },
   {
     name: 'Quest Log',
-    type: 'personal',
+    type: 'Web App',
     thumbnail: 'https://i.ibb.co/whYYR8V/quest-log.png',
     techstack: ['auth0', 'Axios', 'Babel', 'dotenv', 'Express', 'Font Awesome', 'Heroku', 'PostgreSQL', 'React', 'Sequelize', 'stormdb', 'uuid', 'Webpack'],
-    summary: 'This app has gone through several early iterations, and will likely go through several more. The ultimate concept is a personal organizer that has RPG elements, and will create a personal journey story through its use. I have yet to create a UI/UX layout that I like, which has much to do with the constant redesigns.',
-    links: {
-      github: 'https://github.com/tspr0tege/quest-log',
-      hosted: 'https://new-quest-log.herokuapp.com/'
-    }
+    summary: "This app is several recycles in the making, as I've constantly taken it back to the drawing board. It's hosted on an AWS EC2 instance, where I have the entire app running (including the database), and user authentication being handled by the Auth0 API. The app is temporarily shelved as I've been learning the Godot engine. In its current state, it's little more than a to-do app. ",
+    links: [
+      {
+        title: 'App website',
+        link: 'https://www.quest-log.app'
+      },
+      {
+        title: 'Github Repo',
+        link: 'https://github.com/tspr0tege/quest-log'
+      },
+    ]
   },
-  {
-    name: 'Project Catwalk',
-    type: 'educational',
-    thumbnail: null,
-    techstack: ['Axios', 'Babel', 'Express', 'Font Awesome', 'Jest', 'jQuery', 'Mocha/Chai', 'React', 'uuid', 'Webpack'],
-    summary: 'This was a retail website design project that I did as part of a team at Hack Reactor. My part was the overview (main product display). Currently, the project is not viewable, as the API we used for product info no longer exists. I plan to rework the project and create an API to fix this.',
-    links: {
-      github: 'https://github.com/tspr0tege/Project-Catwalk'
-    }
-  }
 ]
 
 export const experience = [
